@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Event</title>
-</head>
-<body>
-    <h1>Edit Event</h1>
+@extends('layout')
+
+@section('title', 'Edit Event')
+
+@section('content')
+<h1>Edit Event</h1>
     <form action="{{ route('events.update', $event->id) }}" method="POST">
         @csrf
         @method('PUT')
@@ -32,5 +29,4 @@
         <button type="submit">Update Event</button>
         <a href="{{ route('events.index') }}">Cancel</a>
     </form>
-</body>
-</html>
+@endsection

@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events</title>
-</head>
-<body>
+@extends('layout')
+
+@section('title', 'Event List')
+
+@section('content')
     <h1>Rave Event List</h1>
     <a href="{{ route('events.create') }}">Create New Event</a>
     <table>
@@ -36,5 +33,4 @@
             @endforeach
         </tbody>
     </table>
-</body>
-</html>
+@endsection

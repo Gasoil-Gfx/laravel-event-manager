@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Event</title>
-</head>
-<body>
-    <h1>Create New Event</h1>
+@extends('layout')
 
-    <!-- Display Validation Errors -->
-    @if ($errors->any())
+@section('title', 'Create Event')
+
+@section('content')
+ <!-- Display Validation Errors -->
+ @if ($errors->any())
         <div style="color: red;">
             <ul>
                 @foreach ($errors->all() as $error)
@@ -54,5 +49,4 @@
         <button type="submit">Save</button>
         <a href="{{ route('events.index') }}">Cancel</a>
     </form>
-</body>
-</html>
+@endsection

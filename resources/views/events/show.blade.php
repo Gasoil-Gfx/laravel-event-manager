@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Details</title>
-</head>
-<body>
-    <h1>Event Details</h1>
+@extends('layout')
+
+@section('title', 'Show Event')
+
+@section('content')
+<h1>Event Details</h1>
     <p><strong>Name:</strong> {{ $event->name }}</p>
     <p><strong>Date:</strong> {{ $event->date }}</p>
     <p><strong>Location:</strong> {{ $event->location }}</p>
@@ -21,5 +18,4 @@
         <button type="submit">Delete Event</button>
     </form>
     <a href="{{ route('events.index') }}">Back to Events</a>
-</body>
-</html>
+@endsection
