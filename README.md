@@ -18,7 +18,7 @@ Follow these steps to set up the project locally:
 Copy the repository to your local machine using the following command:
 
 ```bash
-git clone https://github.com/your-username/laravel-event-manager.git
+git clone https://github.com/Gasoil-Gfx/laravel-event-manager.git
 ```
 
 ### Navigate to the Project Directory
