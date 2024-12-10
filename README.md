@@ -1,93 +1,79 @@
-Laravel Event Manager
+# Laravel Event Manager
 
-Laravel Event Manager is a simple event management system built with Laravel. It demonstrates how to build a CRUD (Create, Read, Update, Delete) application using Laravel's Blade templates and pure CSS for styling. This project is beginner-friendly and designed for those learning Laravel or looking for a lightweight solution for managing events.
-Features
+This project is a beginner-friendly CRUD application built with Laravel. It is designed to learn the basics of Laravel, including how to use Blade templating for views. The front-end is styled using pure CSS and Blade templates, without any additional front-end frameworks.
 
-    CRUD Operations: Easily manage events with functionalities to create, view, edit, and delete.
-    Pure CSS Styling: No external CSS frameworks—clean, minimal, and customizable.
-    Blade Templates: Simple and efficient templating using Laravel's native Blade engine.
-    Database Integration: Built with Laravel's Eloquent ORM for seamless database interactions.
+## Features
 
-Installation
+- Basic CRUD operations (Create, Read, Update, Delete) for managing events.
+- Views are created using Laravel's Blade templating engine.
+- Simple styling with pure CSS for a custom look and feel.
+- Themed around rave events in Morocco.
 
-    Clone the Repository:
+## Getting Started
 
-    bash
+Follow these steps to set up the project locally:
 
-git clone https://github.com/Gasoil-Gfx/laravel-event-manager.git
+### Clone the Repository
+
+Copy the repository to your local machine using the following command:
+
+```bash
+git clone https://github.com/your-username/laravel-event-manager.git
+```
+
+### Navigate to the Project Directory
+
+```bash
 cd laravel-event-manager
+```
 
-Install Dependencies:
+### Install Dependencies
 
-bash
+Run the following command to install the necessary dependencies:
 
+```bash
 composer install
-npm install
+```
 
-Set Up Environment:
+### Set Up Environment Variables
 
-    Copy .env.example to .env:
+Copy the example .env file and generate an application key:
 
-    bash
+```bash
+cp .env.example .env
+php artisan key:generate
+```
 
-    cp .env.example .env
+### Configure Your Database
 
-    Update your database credentials in .env.
+Edit the .env file and update your database information:
 
-Run Database Migrations:
+```env
+DB_DATABASE=your_database_name
+DB_USERNAME=your_database_username
+DB_PASSWORD=your_database_password
+```
 
-bash
+### Run Migrations
 
+This will create the necessary database tables:
+
+```bash
 php artisan migrate
+```
 
-Start the Server:
+### Start the Development Server
 
-bash
+Run the following command to start the server:
 
-    php artisan serve
+```bash
+php artisan serve
+```
 
-Usage
-Creating Events
+### Access the Application
 
-    Navigate to the "Create Event" page to add a new event.
-    Enter details like name, date, and description.
+Open your browser and go to:
 
-Viewing Events
-
-    View a list of all events on the homepage.
-    Click on individual events for more details.
-
-Editing Events
-
-    Click on the "Edit" button next to an event to modify its details.
-
-Deleting Events
-
-    Remove events you no longer need with the "Delete" button.
-
-Screenshots
-Event List
-
-Screenshot of the event list
-Event Creation
-
-Screenshot of the event creation page
-Folder Structure
-
-    app/Http/Controllers/: Contains the EventController for handling CRUD logic.
-    resources/views/: Blade templates for rendering pages.
-    public/css/: Custom pure CSS stylesheets.
-    routes/web.php: Defines the routes for event management.
-
-Contributing
-
-Contributions are welcome! Feel free to fork the repository and submit a pull request. If you find a bug or have a feature request, please open an issue.
-License
-
-This project is open-source and available under the MIT License.
-Acknowledgments
-
-    Built with Laravel.
-    Inspired by the simplicity of minimal UI/UX designs.
-
-This README offers a better explanation of the project's purpose and functionality while providing clear instructions for installation and usage. You can customize it further as the project evolves.
+```
+http://127.0.0.1:8000
+```
